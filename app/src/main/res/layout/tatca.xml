@@ -1,71 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        >
-
+        android:layout_height="50dp"
+        android:background="#DC143C"
+        android:orientation="horizontal">
         <TextView
-            android:layout_width="140dp"
-            android:layout_height="match_parent"
-
-            android:text="   Địa điểm"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
-
-        <Spinner
-            android:layout_width="140dp"
-            android:layout_height="match_parent" />
-
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160sp"
+            android:layout_marginTop="8dp"
+            android:text="Đã lưu"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/im_test0"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:id="@+id/imageView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_search" />
 
-            android:src="@drawable/ic_baseline_location_on_24" />
-
-        <ImageView
-            android:id="@+id/im_test1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-
-            android:src="@drawable/ic_baseline_collections_24" />
-
-        <ImageView
-            android:id="@+id/im_test"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-
-            android:src="@drawable/ic_baseline_bookmark_24" />
     </LinearLayout>
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:tabIndicatorColor="#DC143C"
+        app:tabMode="fixed"
+        app:tabTextColor="#DC143C" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="636dp"
-        android:layout_marginTop="50dp">
+        android:layout_height="505dp"
+        android:layout_marginTop="0dp">
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:id="@+id/list_f"/>
 
     </LinearLayout>
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_marginTop="685dp"
+        android:layout_marginTop="0dp"
         android:background="#FDF5E6"
         android:orientation="horizontal">
 
@@ -107,4 +103,4 @@
     </LinearLayout>
 
 
-</FrameLayout>
+</LinearLayout>
